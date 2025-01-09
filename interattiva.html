@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - Validazione Interattiva</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .disabled{
+            display: none;
+        }
+
+        html{
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form con Validazione Interattiva</h1>
+    <form>
+        <div class="mb-3">
+            <label for="nickname" class="form-label">Nickname:</label>
+            <input type="text" class="form-control" id="nickname">
+            <div id="nickname_alert" class="alert alert-warning disabled" role="alert">Il campo non deve essere vuoto</div>
+        </div>
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" class="form-control" id="nome">
+            <div id="nome_alert" class="alert alert-warning disabled" role="alert">Il campo non deve essere vuoto</div>
+        </div>
+        <div class="mb-3">
+            <label for="cognome" class="form-label">Cognome:</label>
+            <input type="text" class="form-control" id="cognome">
+            <div id="cognome_alert" class="alert alert-warning disabled" role="alert">Il campo non deve essere vuoto</div>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" class="form-control" id="password" placeholder="Almeno 8 caratteri">
+        </div>
+        <div class="mb-3">
+            <label for="password_conferma" class="form-label">Conferma password:</label>
+            <input type="password" class="form-control" id="password_conferma" placeholder="Le due password devono combaciare">
+            <div id="password_alert" class="alert alert-warning disabled" role="alert">Le password devono combaciare ed essere di una lunghezza minima di 8 caratteri</div>
+        </div>
+        <div class="mb-3">
+            <label for="citta" class="form-label">Città:</label>
+            <input type="text" class="form-control" id="citta">
+            <div id="citta_alert" class="alert alert-warning disabled" role="alert">Il campo non deve essere vuoto</div>
+        </div>
+        <div class="mb-3">
+            <label for="regione" class="form-label">Regione:</label>
+            <select class="form-select" id="regione" aria-label="Default select example">
+                <option selected value="0">Seleziona un'opzione</option>
+                <option value="1">Abruzzo</option>
+                <option value="2">Basilicata</option>
+                <option value="3">Calabria</option>
+                <option value="4">Campania</option>
+                <option value="5">Emilia Romagna</option>
+                <option value="6">Friuli Venezia Giulia</option>
+                <option value="7">Lazio</option>
+                <option value="8">Liguria</option>
+                <option value="9">Lombardia</option>
+                <option value="10">Marche</option>
+                <option value="11">Molise</option>
+                <option value="12">Piemonte</option>
+                <option value="13">Puglia</option>
+                <option value="14">Sardegna</option>
+                <option value="15">Sicilia</option>
+                <option value="16">Toscana</option>
+                <option value="17">Trentino Alto Adige</option>
+                <option value="18">Umbria</option>
+                <option value="19">Valle d'Aosta</option>
+                <option value="20">Veneto</option>
+            </select>
+            <div id="regione_alert" class="alert alert-warning" role="alert">È necessario selezionare una regione</div>
+        </div>
+        <div class="mb-3">
+            <label for="codice_fiscale" class="form-label">Codice Fiscale:</label>
+            <input type="text" class="form-control" id="codice_fiscale" placeholder="Inserisci il codice fiscale">
+            <div id="codice_fiscale_alert" class="alert alert-warning disabled" role="alert">Il codice fiscale deve essere formato da <b>16</b> caratteri</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        
+        
+    </form>
+    <div id="attenzione" class="alert alert-warning disabled" role="alert">Campi mancanti o non corretti</div>
+    <div id="successo" class="alert alert-success disabled" role="alert">Registrazione avvenuta</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="interattiva.js"></script>
+</body>
+</html>
