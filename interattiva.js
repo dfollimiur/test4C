@@ -1,4 +1,4 @@
-/*
+/* ==
 1)Se il nick è
 vuoto di restituire un messaggio di errore
 2)Le due password devono coincidere altrimenti riportare un messaggio di errore
@@ -6,7 +6,7 @@ vuoto di restituire un messaggio di errore
 4)La regione deve essere selezionata
 5)Infine
 Controllare se sono stati digitati i 16 caratteri del codice fiscale
-*/
+== */
 let form = document.forms[0]
 
 function checkVuoto(valore){
